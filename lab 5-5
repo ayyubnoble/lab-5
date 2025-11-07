@@ -1,0 +1,35 @@
+public class Numbers
+{
+   /**
+      Computes the length of the longest run (sequence of 
+      adjacent repeated values) in an array.
+      @param values an array of integer values
+      @return the length of the longest run in values
+   */
+   public int lengthOfLongestRun(int[] values)
+   {
+      // if array is empty, longest run is 0
+      if (values.length == 0)
+         return 0;
+
+      int longest = 1;   // longest run found so far
+      int current = 1;   // current run length
+
+      // loop through array starting from second element
+      for (int i = 1; i < values.length; i++)
+      {
+         if (values[i] == values[i - 1])
+         {
+            current++;                // extend current run
+            if (current > longest)
+               longest = current;     // update longest
+         }
+         else
+         {
+            current = 1;              // reset run count
+         }
+      }
+
+      return longest;
+   }
+}
