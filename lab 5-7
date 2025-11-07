@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class ArrayOps
+{
+   /**
+       This method goes through the array of integers identified by
+       the only parameter, creating a new ArrayList from the array,
+       eliminating duplicates from the original array.
+       @param theArray, an array of integers
+       @return uniqueIntAL, the new ArrayList
+   */
+   public static ArrayList<Integer> copyArray(int[] anArray)
+   {
+      // declare the new ArrayList
+      ArrayList<Integer> uniqueIntAL = new ArrayList<Integer>();
+
+      // loop through anArray, eliminate duplicates
+      for (int value : anArray)
+      {
+         // add only if not already in ArrayList
+         if (!uniqueIntAL.contains(value))
+         {
+            uniqueIntAL.add(value);
+         }
+      }
+
+      // return new ArrayList
+      return uniqueIntAL;
+   }
+}
