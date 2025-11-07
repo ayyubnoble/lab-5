@@ -1,0 +1,26 @@
+public class Numbers
+{
+   /**
+      Computes the number of even and odd values in a given array
+      @param values an array of integer values
+      @return an array of length 2 whose 0 entry contains the count
+      of even elements and whose 1 entry contains the count of odd
+      values
+   */
+   public int[] evenOdds(int[] values)
+   {
+      // array to store counts: [evenCount, oddCount]
+      int[] counts = new int[2];
+
+      // loop through values and count even / odd
+      for (int num : values)
+      {
+         if (num % 2 == 0)
+            counts[0]++;   // even
+         else
+            counts[1]++;   // odd
+      }
+
+      return counts;
+   }
+}
