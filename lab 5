@@ -1,1 +1,14 @@
-https://codecheck.io/private/resume/25102714563uogasd5zd1xj2iu20rxigvs9/ziri-kize-mire-fope/62FG8N9FZUGXCRNYW4BKN7GXL 
+ public static int sumArray(int values[])
+   {
+      // initialize sum
+      int sum = 0;
+
+      // add all elements to sum
+      for (int i = 0; i < values.length; i++) {
+         sum += values[i];
+      }
+
+      // return sum
+      return sum;
+   }
+}
